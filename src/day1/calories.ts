@@ -1,5 +1,5 @@
-import { readInput } from '../../util/input';
-import { insertInSortedArray } from '../../util/sort';
+import { readInput } from '../util/input';
+import { insertInSortedArray } from '../util/sort';
 
 const input = readInput('day1/calories/calories.txt').toString().trim();
 

@@ -8,7 +8,9 @@
     "format": "prettier --write src",
     "run-ts": "node --experimental-specifier-resolution=node --loader ts-node/esm",
     "day1": "yarn run-ts src/day1/calories",
-    "day2": "yarn run-ts src/day2/rps"
+    "day2": "yarn run-ts src/day2/rps",
+    "day3": "yarn run-ts src/day3/rucksack",
+    "day4": "yarn run-ts src/day4/pairs"
   },
   "dependencies": {
     "@types/node": "^18.11.10",

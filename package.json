@@ -11,7 +11,8 @@
     "day2": "yarn run-ts src/day2/rps",
     "day3": "yarn run-ts src/day3/rucksack",
     "day4": "yarn run-ts src/day4/pairs",
-    "day5": "yarn run-ts src/day5/stacks"
+    "day5": "yarn run-ts src/day5/stacks",
+    "day6": "yarn run-ts src/day6/signal"
   },
   "dependencies": {
     "@types/node": "^18.11.10",

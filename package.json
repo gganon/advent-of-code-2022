@@ -13,7 +13,8 @@
     "day4": "yarn run-ts src/day4/pairs",
     "day5": "yarn run-ts src/day5/stacks",
     "day6": "yarn run-ts src/day6/signal",
-    "day7": "yarn run-ts src/day7/files"
+    "day7": "yarn run-ts src/day7/files",
+    "day8": "yarn run-ts src/day8/trees"
   },
   "dependencies": {
     "@types/lodash": "^4.14.191",

@@ -3,7 +3,7 @@ const input = readInput('day10/instructions.txt').trim();
 
 let signalStrengthSum = 0;
 
-let output = new Array(6).fill(null).map(() => new Array(40).fill('.'));
+let output = new Array(6).fill(null).map(() => new Array(40).fill(' '));
 
 const shouldLightUpPixel = (currentPixelPosition, spritePosition) =>
   Math.abs(currentPixelPosition - spritePosition) <= 1;
@@ -32,14 +32,14 @@ input
 
       // should light up this pixel?
       if (shouldLightUpPixel(position, x)) {
-        output[lineNumber][position] = '#';
+        output[lineNumber][position] = '█';
       }
 
       // if this is an addx instruction, check if the next cycle (which we're skipping over) also needs to be lit up
       let nextPosition = ((cycle + 1) % 40) - 1;
       if (instruction === 'addx' && shouldLightUpPixel(nextPosition, x)) {
         let nextLineNumber = Math.floor((cycle + 1) / 40);
-        output[nextLineNumber][nextPosition] = '#';
+        output[nextLineNumber][nextPosition] = '█';
       }
 
       // signal strength

@@ -16,7 +16,8 @@
     "day7": "yarn run-ts src/day7/files",
     "day8": "yarn run-ts src/day8/trees",
     "day9": "yarn run-ts src/day9/rope",
-    "day10": "yarn run-ts src/day10/clock"
+    "day10": "yarn run-ts src/day10/clock",
+    "day11": "yarn run-ts src/day11/monkeys"
   },
   "dependencies": {
     "@types/lodash": "^4.14.191",

@@ -15,7 +15,7 @@ const compareLists = (listA: List, listB: List): number => {
   for (let [i, itemA] of listA.entries()) {
     let itemB = listB[i];
 
-    if (!itemB) {
+    if (itemB === undefined) {
       return 1;
     }
 
@@ -39,16 +39,27 @@ const compareLists = (listA: List, listB: List): number => {
 };
 
 console.log(
-  JSON.stringify(
-    pairs.map(([listA, listB], i) => {
-      return {
-        index: i + 1,
-        comparison: compareLists(listA, listB),
-      };
-    }),
-    null,
-    2
-  )
-  // .filter(({ comparison }) => comparison <= 0)
-  // .reduce((sum, { index }) => sum + index, 0)
+  pairs
+    .map(([listA, listB], i) => ({
+      index: i + 1,
+      comparison: compareLists(listA, listB),
+    }))
+    .filter(({ comparison }) => comparison <= 0)
+    .reduce((sum, { index }) => sum + index, 0)
 );
+
+const sorted = pairs
+  .flatMap((pairs) => pairs)
+  .concat([[[2]], [[6]]])
+  .sort(compareLists);
+
+const dividerPacket1Index = sorted.findIndex(
+  (packet) => JSON.stringify(packet) === '[[2]]'
+);
+const dividerPacket2Index = sorted.findIndex(
+  (packet) => JSON.stringify(packet) === '[[6]]'
+);
+
+console.log((dividerPacket1Index + 1) * (dividerPacket2Index + 1));
+
+console.log(compareLists([[]], [3]));
